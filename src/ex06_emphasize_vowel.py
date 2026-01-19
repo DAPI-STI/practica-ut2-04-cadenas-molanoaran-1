@@ -11,21 +11,11 @@ Si la vocal no es válida, lanzar ValueError.
 """
 
 def emphasize_vowel(phrase: str, vowel: str) -> str:
-    """Convierte a mayúscula todas las apariciones de vowel (sin distinguir mayúsculas)."""
-    vowel = vowel.lower().strip()
-
-    if len(vowel) != 1 or vowel not in "aeiou":
-        raise ValueError("Debes introducir una sola vocal válida: a, e, i, o, u.")
-
-    return "".join(c.upper() if c.lower() == vowel else c for c in phrase)
-
-
-if __name__ == "__main__":
-    frase = input("Escribe una frase: ")
-    vocal = input("Elige una vocal a resaltar (a, e, i, o, u): ")
-
-    try:
-        resultado = emphasize_vowel(frase, vocal)
-        print("\nFrase resultante:", resultado)
-    except ValueError as e:
-        print("Error:", e)
+    """
+    Convierte a mayúscula todas las apariciones de vowel en la frase.
+    Sugerencia:
+    - Comprueba que vowel es un solo carácter y está en "aeiou" (en minúscula).
+    - Recorre la frase carácter a carácter y construye una nueva cadena.
+    """
+    # TODO: validar y transformar
+    raise NotImplementedError("Implementa emphasize_vowel(phrase, vowel)")

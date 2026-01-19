@@ -7,29 +7,11 @@ Ejemplo: "+34-913724710-56" -> "913724710"
 
 def phone_core(s: str) -> str:
     """
-    Devuelve la parte central del teléfono, validando formato +XX-YYYYYYY-ZZ.
+    Recibe el teléfono como cadena y devuelve solo la parte central.
+    Requisitos mínimos (si no se cumplen, lanza ValueError):
+    - Debe haber exactamente 3 partes separadas por "-".
+    - La primera parte debe comenzar por "+" (prefijo).
+    - La parte central debe ser numérica.
     """
-    s = s.strip()
-    partes = s.split("-")
-
-    if len(partes) != 3:
-        raise ValueError("El número debe tener tres partes separadas por '-'.")
-
-    prefijo, central, sufijo = partes
-
-    if not prefijo.startswith("+"):
-        raise ValueError("El prefijo debe comenzar con '+'.")
-
-    if not central.isdigit():
-        raise ValueError("La parte central debe ser numérica.")
-
-    return central
-
-
-if __name__ == "__main__":
-    telefono = input("Ingresa un número de teléfono con formato +XX-YYYYYYY-ZZ: ")
-    try:
-        core = phone_core(telefono)
-        print("Parte central del número:", core)
-    except ValueError as e:
-        print("Error:", e)
+    # TODO: usa .strip(), .split("-") y validaciones con .isdigit() y startswith("+")
+    raise NotImplementedError("Implementa phone_core(s)")

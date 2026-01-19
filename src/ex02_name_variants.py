@@ -12,17 +12,5 @@ La función devolverá una tupla: (minusculas, mayusculas, capitalizado).
 
 def name_variants(full_name: str) -> tuple[str, str, str]:
     """Devuelve (minusculas, MAYUSCULAS, Capitalizado-Por-Palabra)."""
-    minusculas = full_name.lower()
-    mayusculas = full_name.upper()
-    capitalizado = full_name.title()
-    return (minusculas, mayusculas, capitalizado)
-
-
-if __name__ == "__main__":
-    full_name = input("Ingresa tu nombre completo: ")
-
-    minus, mayus, cap = name_variants(full_name)
-
-    print("\nTodo en minúsculas:", minus)
-    print("Todo en MAYÚSCULAS:", mayus)
-    print("Capitalizado:", cap)
+    # TODO: usa los métodos .lower(), .upper() y .title() de str
+    raise NotImplementedError("Implementa name_variants(full_name)")
